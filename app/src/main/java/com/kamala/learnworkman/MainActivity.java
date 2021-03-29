@@ -26,6 +26,12 @@ public class MainActivity extends AppCompatActivity {
 
         PeriodicWorkRequest periodicWorkRequest = new PeriodicWorkRequest.Builder(MyPeriodic.class,20, TimeUnit.MINUTES).setConstraints(periodConstraints).build();
         WorkManager.getInstance(this).enqueue(periodicWorkRequest);
+//
+        //
+        //chained
+        OneTimeWorkRequest oneTimeWorkRequestOne = new OneTimeWorkRequest.Builder(MyChained.class).setConstraints(constraints).build();
+        OneTimeWorkRequest oneTimeWorkRequestTwo = new OneTimeWorkRequest.Builder(MyChainedWork.class).setConstraints(constraints).build();
 
+        WorkManager.getInstance(this).beginWith(oneTimeWorkRequestOne).then(oneTimeWorkRequestTwo).enqueue();
     }
 }
