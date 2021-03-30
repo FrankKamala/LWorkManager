@@ -8,15 +8,18 @@ import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
+    private TextView mText;
     public static String TAG="Main";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mText = findViewById(R.id.onlyText);
 
         Constraints constraints =new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
         Constraints periodConstraints =new Constraints.Builder().setRequiresBatteryNotLow(true).build();
