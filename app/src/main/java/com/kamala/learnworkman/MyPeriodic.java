@@ -9,7 +9,7 @@ import androidx.work.WorkerParameters;
 
 public class MyPeriodic  extends Worker {
 
-    public static String TAG="here";
+    public static String TAG="Periodic";
     public MyPeriodic(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
     }

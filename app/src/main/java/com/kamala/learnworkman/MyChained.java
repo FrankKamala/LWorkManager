@@ -9,7 +9,7 @@ import androidx.work.WorkerParameters;
 
 public class MyChained extends Worker {
 
-    public static String TAG="Main";
+    public static String TAG="Main Chained";
     public MyChained(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
     }

@@ -18,7 +18,7 @@ public class MyChainedWork extends Worker {
     @Override
     public Result doWork() {
 
-        Log.e(TAG,"Worker");
+        Log.e(TAG,"Worker 2");
         return Result.success();
     }
 }

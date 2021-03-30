@@ -11,7 +11,7 @@ import androidx.work.WorkerParameters;
 
 
 public class MyWorker  extends Worker {
-    public static String TAG="im here";
+    public static String TAG="one time";
 
     public MyWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
